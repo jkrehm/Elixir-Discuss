@@ -1,0 +1,15 @@
+/* This file is for your main application css. */
+
+h1 {
+  font-size: 2rem;
+}
+
+.help-block {
+  color: red;
+  margin-top: -0.5rem;
+  text-transform: capitalize;
+}
+
+.alert {
+  margin-top: 1rem;
+}
