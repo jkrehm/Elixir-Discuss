@@ -1,0 +1,25 @@
+<h1>Topics</h1>
+
+<ul class="collection">
+  <%= for topic <- @topics do %>
+    <li class="collection-item flex items-center">
+      <span class="flex-1">
+        <%= topic.title %>
+      </span>
+
+      <%= link to: topic_path(@conn, :edit, topic.id) do %>
+        <i class="material-icons">edit</i>
+      <% end %>
+
+      <%= link to: topic_path(@conn, :delete, topic.id), class: "ml-2", method: :delete, data: [confirm: "Are you sure?"] do %>
+        <i class="material-icons text-danger">delete</i>
+      <% end %>
+    </li>
+  <% end %>
+</ul>
+
+<div class="fixed-action-btn">
+  <%= link to: topic_path(@conn, :new), class: "btn-floating btn-large waves-effect waves-light red" do %>
+    <i class="material-icons">add</i>
+  <% end %>
+</div>
